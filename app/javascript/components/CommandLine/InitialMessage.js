@@ -9,8 +9,8 @@ const Message = ({ onTypingDone }) => (
     <Typist.Delay ms={300} /><br/>
     <Typist.Delay ms={200} /><br/>
     <Typist.Delay ms={700} />
-    Use command line commands to navigate through my portfolio, <Typist.Delay ms={200} /><br/>
-    or type <span className="text-success">help</span> for more commands.
+    Click the links in this <span className="text-success">command line</span> <Typist.Delay ms={200} />
+    to navigate through my portfolio.
   </Typist>
 )
 

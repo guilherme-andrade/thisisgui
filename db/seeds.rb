@@ -10,32 +10,57 @@ Message.destroy_all
 puts "EMPTIED DATABASE"
 puts "----------"
 
-greeting = Message.create()
+greeting = Message.create(
+  command: 'cd'
+)
 
 
-option1 = Message.create(
+designs = Message.create(
   command: 'cd',
   action: 'designs'
 )
-
-
-greeting.children << option1
+greeting.children << designs
 
 
 
-option2 = Message.create(
+code = Message.create(
   command: 'cd',
   action: 'code'
 )
-
-greeting.children << option2
-
+greeting.children << code
 
 
-option3 = Message.create(
+
+projects = Message.create(
   command: 'cd',
   action: 'projects'
 )
+greeting.children << projects
 
-greeting.children << option3
 
+sport_spots = Message.create(
+  command: 'cd',
+  action: 'Sport Spots'
+)
+designs.children << sport_spots
+
+file = Message.create(
+  command: 'open',
+  action: 'sport_spots.xd',
+  link: 'https://xd.adobe.com/spec/0bdd8e8b-12ac-4a90-70fc-d281da373059-7dec/'
+)
+sport_spots.children << file
+
+reco = Message.create(
+  command: 'cd',
+  action: 'ReCo'
+)
+designs.children << reco
+
+
+file = Message.create(
+  command: 'open',
+  action: 'reco.xd',
+  link: 'https://xd.adobe.com/spec/8dd7c78e-6cc1-47d7-70f8-bc2eed82dd7a-fbe6/'
+)
+reco.children << file

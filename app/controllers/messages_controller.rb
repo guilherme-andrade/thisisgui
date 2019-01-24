@@ -11,10 +11,15 @@ class MessagesController < ApplicationController
   # GET /messages/1.json
   def show; end
 
+  def first
+    @message = Message.first
+    render :show
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_message
-      @message = Message.where(params)
+      @message = Message.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
