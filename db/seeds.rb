@@ -14,28 +14,13 @@ greeting = Message.create(
   command: 'cd'
 )
 
+# -----------------------------
 
 designs = Message.create(
   command: 'cd',
   action: 'designs'
 )
 greeting.children << designs
-
-
-
-code = Message.create(
-  command: 'cd',
-  action: 'code'
-)
-greeting.children << code
-
-
-
-projects = Message.create(
-  command: 'cd',
-  action: 'projects'
-)
-greeting.children << projects
 
 
 sport_spots = Message.create(
@@ -64,3 +49,79 @@ file = Message.create(
   link: 'https://xd.adobe.com/spec/8dd7c78e-6cc1-47d7-70f8-bc2eed82dd7a-fbe6/'
 )
 reco.children << file
+
+# -----------------------------
+
+code = Message.create(
+  command: 'cd',
+  action: 'code'
+)
+greeting.children << code
+
+
+react_rails = Message.create(
+  command: 'cd',
+  action: 'React+Rails'
+)
+code.children << react_rails
+
+koti = Message.create(
+  command: 'open',
+  action: 'www.koti.patricknpinto.com'
+)
+react_rails.children << koti
+
+
+rails = Message.create(
+  command: 'cd',
+  action: 'Rails'
+)
+code.children << rails
+
+sport_spots = Message.create(
+  command: 'open',
+  action: 'www.koti.patricknpint.com'
+)
+rails.children << sport_spots
+
+seabookings = Message.create(
+  command: 'open',
+  action: 'www.seabookings.com'
+)
+rails.children << seabookings
+
+# -----------------------------
+
+projects = Message.create(
+  command: 'cd',
+  action: 'projects'
+)
+greeting.children << projects
+
+
+product_management = Message.create(
+  command: 'cd',
+  action: 'Product Management'
+)
+projects.children << product_management
+
+growth_hacking = Message.create(
+  command: 'cd',
+  action: 'Growth Hacking'
+)
+projects.children << growth_hacking
+
+
+koti = Message.create(
+  command: 'open',
+  action: 'www.koti.patricknpinto.com'
+)
+product_management.children << koti
+
+nomadx = Message.create(
+  command: 'open',
+  action: 'www.nomdax.com'
+)
+growth_hacking.children << nomadx
+
+
