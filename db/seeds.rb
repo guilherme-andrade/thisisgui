@@ -67,7 +67,7 @@ code.children << react_rails
 
 koti = Message.create(
   command: 'open',
-  action: 'www.koti.patricknpinto.com'
+  action: 'https://sportspots-production.herokuapp.com/'
 )
 react_rails.children << koti
 
